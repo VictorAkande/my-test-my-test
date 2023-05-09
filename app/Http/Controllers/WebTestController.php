@@ -80,7 +80,7 @@ class WebTestController extends Controller
             $role = Auth::user()->is_admin === 1 ? "Admin" : "User" ;
             return view('dashboard')->with('role', $role  );
         }
-        return redirect()->route('login')->with('error', 'You need tgo log in first');
+        return redirect()->route('login')->with('error', 'You need to log in first');
     }
 
     public function logout(){
